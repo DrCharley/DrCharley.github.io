@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+    <link href="/main/style.css" rel="stylesheet">
+    <script src="cart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Библиотека jQuery-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!--Готовый скрипт корзины-->
+<script defer src="https://lk.easynetshop.ru/frontend/v5/ens-d2212e03.js"></script>
+
+<!--Стили элементов для корзины-->
+<link href="https://lk.easynetshop.ru/frontend/v5/ens-d2212e03.css" rel="stylesheet">
+    <title>Flowers</title>
+    <style>
+      body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    #running-text-container {
+      position: relative;
+      white-space: nowrap;
+      overflow-y: hidden;
+    }
+
+    .running-text {
+      display: inline-block;
+      animation: runText 30s linear infinite;
+    }
+
+    @keyframes runText {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-1000%); }
+    }
+  </style> 
+</head>
+
+<body>
+
+    <div class="desktop-1">
+
+      <div class="nav_bar">
+
+          <div class="drop" ><a href="/support/support.html">О нас</a></div>
+
+          <div class="drop"><a href="/bouquets/bouquets.html">Букеты</a>
+          </div>
+
+          <div class="drop"><a >Цветы</a>
+              <div class="nav_categories">
+                  <div class="column1">
+                      <a class="nav_links_action" href="/flowers/flowers_rose.html">Розы</a>
+                      <a class="nav_links_advent" href="/flowers/flowers_pion.html">Пионы</a>
+                      <a class="nav_links_race" href="/flowers/flowers_hrizantem.html">Хризантемы</a>
+                      <a class="nav_links_fight" href="/flowers/flowers_lilia.html">Лилии</a>
+                  </div>
+
+                  <div class="column2">
+                      <a class="nav_links_shooter" href="/flowers/flowers_tulpan.html">Тюльпаны</a>
+                      <a class="nav_links_role" href="/flowers/flowers_gortenzia.html">Гортензии</a>
+                      <a class="nav_links_horror" href="/flowers/flowers_gvozdica.html">Гвоздики</a>
+                      <a class="nav_links_sport" href="/flowers/flowers_gladiolus.html">Гладиолусы</a>
+                  </div>
+              </div>
+          </div>
+        
+          <div class="drop"><a href="/delivery/delivery.html">Доставка</a>
+          </div>
+
+      </div>
+
+      <div class="linephoto">
+      </div>
+
+      <div id="running-text-container">
+            <div class="running-text">| ДО 30.01 СКИДКА 15%.</div>
+    </div>
+
+      <script>
+         document.addEventListener('DOMContentLoaded', function () {
+          const runningTextContainer = document.getElementById('running-text-container');
+          const runningText = document.querySelector('.running-text');
+
+          function setContainerWidth() {
+            const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            const textWidth = runningText.offsetWidth;
+            const numberOfClones = Math.ceil(1000/1);
+            
+            let i = 1;
+
+            function createClone() {
+              const clone = runningText.cloneNode(true);
+              runningTextContainer.appendChild(clone);
+              i++;
+
+              if (i < numberOfClones) {
+                // Устанавливаем небольшую задержку перед созданием следующего клон
+                setTimeout(createClone, 0);
+              }
+            }
+
+            createClone(); // Начинаем процесс клонирования
+          }
+
+          setContainerWidth(); // Вызываем при загрузке страницы
+          window.addEventListener('resize', setContainerWidth); // Вызываем при изменении размеров окна
+        });
+      </script>
+      <div class="divsub">
+        
+        <div class="subtitle">
+          <a href="/index.html">FLORESANS</a>
+        </div>
+
+        <div class="phrase">
+        <p> В каждом доме должны быть уют, радость и цветы! </p>
+        </div>
+
+        <div class="phrase1">
+          <p> Сезонные композиции:</p>
+        </div>
+
+
+        <div class="p_catalog">
+          
+          <div class="frame-1">
+            <div class="image">
+              <a">
+                <img class="photo"
+                src="/main/3.JPEG"
+                >
+              </a>
+              <p class="name">БУКЕТ "НАСТРОЕНИЕ"<br>2890Р.</p>
+              <a class="btn-ens-action btn-ens-style" data-rel="d2212e03329121">Купить</a>
+            </div>
+
+          </div>
+
+          
+          <div class="frame-2">
+            <div class="image">
+              <a">
+                <img class="photo"
+                src="/main/2.JPEG"
+                >
+              </a>
+              <p class="name">БУКЕТ "PRESENT"<br>2590Р.</p>
+              <a class="btn-ens-action btn-ens-style" data-rel="d2212e03329121">Купить</a>
+            </div>
+            
+          </div>
+
+          <div class="frame-3">
+            <div class="image">
+              <a">
+                <img class="photo"
+                src="/main/1.JPEG"
+                >
+              </a>
+              <p class="name">БУКЕТ "РОЖДЕСТВО"<br>2690Р.</p>
+              <a class="btn-ens-action btn-ens-style" data-rel="d2212e03329121">Купить</a>
+            </div>
+          </div>
+
+          <div class="frame-3">
+            <div class="image">
+              <a">
+                <img class="photo"
+                src="/main/f10.jpeg"
+                >
+              </a>
+              <p class="name">БУКЕТ "НОВЫЙ"<br>3690Р.</p>
+              <a class="btn-ens-action btn-ens-style" data-rel="d2212e03329121">Купить</a>
+            </div>
+          </div>
+
+          <div class="frame-3">
+            <div class="image">
+              <a">
+                <img class="photo"
+                src="/main/f11.jpeg"
+                >
+              </a>
+              <p class="name">БУКЕТ "ХЛОПОК"<br>1690Р.</p>
+              <a class="btn-ens-action btn-ens-style" data-rel="d2212e03329121">Купить</a>
+            </div>
+          </div>
+
+          <div class="frame-3">
+            <div class="image">
+              <a">
+                <img class="photo"
+                src="/main/f12.jpeg"
+                >
+              </a>
+              <p class="name">БУКЕТ "ЁЛКА"<br>1490Р.</p>
+              <a class="btn-ens-action btn-ens-style" data-rel="d2212e03329121">Купить</a>
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+        <div class="end">
+
+          <div class="line1">
+              ______________________________________________________________________________________________________________________________________________________
+          </div>
+
+          <div class="text_end1">
+              <p>
+                  Все торговые марки являются собственностью соответствующих владельцев 
+                  в Российской Федерации и других странах.
+                  НДС включён во все цены, где он применим.
+              </p>
+          </div>
+
+          <div class="text_end2">
+                  <a href="../Support/support.html">Служба поддержки | </a>
+                  <a href="../Support/contacts.html">Контакт | </a>
+                  <a href="">Политика конфиденциальности | </a>
+                  <a href="">Правовая информация | </a>
+                  <a href="">Файлы cookie</a>
+              
+          </div>
+
+          <div class="line1">
+              ______________________________________________________________________________________________________________________________________________________
+          </div>
+
+      </div>
+    </div>
+      
+        
+        
+    </div>
+
+</body>
+
+</html>
